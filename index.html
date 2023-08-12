@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mydiv">
+
+    </div>
+
+    <script>
+        // create a array of objects
+        var myObj = [{
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        },
+        {
+            name: "John",
+            age: 30,
+            city: "New York"
+        }
+        ];
+        var myDiv = document.querySelector(".mydiv");
+
+        // Iterate through the array and create HTML elements to display the content
+        myObj.forEach(function (person) {
+            var personInfo = document.createElement("p");
+            personInfo.textContent = "Name: " + person.name + ", Age: " + person.age + ", City: " + person.city;
+            myDiv.appendChild(personInfo);
+        });
+    </script>
+</body>
+
+</html>

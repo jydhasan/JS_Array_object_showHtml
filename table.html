@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Add some styling to the displayed content */
+        .mydiv {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        /* Add styling for the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mydiv">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table rows will be added here using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Your array of objects
+        var myObj = [
+            {
+                name: "John",
+                age: 30,
+                city: "New York"
+            },
+            {
+                name: "Jane",
+                age: 28,
+                city: "Los Angeles"
+            },
+            // Add more objects here...
+        ];
+
+        // Get the reference to the table body element
+        var tableBody = document.getElementById("tableBody");
+
+        // Iterate through the array and create table rows for each object
+        myObj.forEach(function (person) {
+            var row = tableBody.insertRow();
+            var nameCell = row.insertCell(0);
+            var ageCell = row.insertCell(1);
+            var cityCell = row.insertCell(2);
+
+            nameCell.textContent = person.name;
+            ageCell.textContent = person.age;
+            cityCell.textContent = person.city;
+        });
+    </script>
+</body>
+
+</html>
